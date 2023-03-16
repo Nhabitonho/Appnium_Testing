@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="ultilities.listeners.ReportListener"/>
+    </listeners>
+    <test name="Run test on devices 1">
+        <parameter name="port" value="4723"/>
+        <parameter name="device-Name" value="sdk_gphone64_x86"/>
+        <parameter name="device-Version" value="11"/>
+        <parameter name="device-url" value="http://127.0.0.1:4723/wd/hub"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="evn" value="dev"/>
+        <classes>
+            <class name="testcases.Create_ContactTest"/>
+            <class name="testcases.Edit_ContactTest"/>
+            <class name="testcases.SendMess_ContactTest"/>
+            <class name="testcases.Delete_ContactTest"/>
+            <class name="testcases.Search_ContactTest"/>
+        </classes>
+    </test>
+
+</suite>
